@@ -66,7 +66,7 @@ st.write("## DASHBOARD")
 
   # metrica faturamento total
   
-total = dadosped["valor"].sum
+total = dadosped["valor"].sum()
 st.metric("faturamento total", f"R$ {total}")
 
   
