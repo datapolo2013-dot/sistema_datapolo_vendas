@@ -67,7 +67,7 @@ st.write("## DASHBOARD")
   # metrica faturamento total
   
 total = dadosped["valor"].sum
-st.metric("faturamento total", total)
+st.metric("faturamento total", f"R$ {total}")
 
   
     # grafico coluna venda por vendedor
