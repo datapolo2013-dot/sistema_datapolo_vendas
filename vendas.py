@@ -45,10 +45,12 @@ botao = st.sidebar.button("Gravar")
 if botao:
     if valor <= 0 or produto == 0:
        st.warning("preencha valor")
-dadospedn = [str(data), vendedor, produto, qtde, valor]
-ultima_vendas = len(dadospedn)
-dadosped.loc(ultima_vendas) = dadospedn
+dadospedn = [str(data), vendedor, produto, quantidade, valor]
+ultima_vendas = len(dadosped)
+dadosped.loc[ultima_vendas] = dadospedn
 dadosped.to_csv("vendas.csv", index=False)
+
+  
 
 # print(dadospedn)  somente termianl
 st.success("Pedido incluido com Sucesso")
