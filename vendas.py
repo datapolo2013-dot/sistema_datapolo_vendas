@@ -58,12 +58,18 @@ if botao:
 st.write("## VENDAS CADASTRADAS")
 
 # visualizar vendas
+botao1 = st.sidebar.button("Exclui")
+if botao1:
+    dadospedn = [str(delattr), vendedor, produto, qtde, valor]
+    ultima_vendas = len(dadosped)
+    dadosped.loc[ultima_vendas] = dadospedn
+    dadosped.to_csv("vendas.csv", index=False)
 
 st.dataframe(dadosped)
 # dashboard
 
 st.write("## DASHBOARD")
-botao1 = st.sidebar.button("Exclui")
+
 
 
   # metrica faturamento total
