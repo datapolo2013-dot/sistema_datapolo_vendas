@@ -63,6 +63,8 @@ st.dataframe(dadosped)
 # dashboard
 
 st.write("## DASHBOARD")
+botao1 = st.sidebar.button("Exclui")
+
 
   # metrica faturamento total
   
